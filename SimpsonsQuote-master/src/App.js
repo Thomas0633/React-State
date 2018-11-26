@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import Quote from "./Quote.js";
+import { Button } from 'reactstrap';
+
 import Lamp from "./Lamp";
 
 class App extends Component {
@@ -30,26 +31,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className={classImg} alt="logo" />
-          <h1 className="App-title">Simpsons Quotes</h1>
+          <br />
+          <Button color="info" className='mt-3 mb-5' onClick={this.handleClick}>
+            {logoReact}
+          </Button>
+
+          <h1>Allume la lumière !</h1>
+          <h2 className='pt-2 pb-2'><i className="fas fa-lightbulb"></i> Amuse toi avec ces bouttons ! <i className="fab fa-react"></i></h2>
         </header>
-
-        <button onClick={this.handleClick}>
-          {logoReact}
-        </button>
-
+        
         <Lamp on />
         <Lamp />
-
-        <Quote
-          quote="I believe the children are the future... Unless we stop them now!"
-          character="Homer Simpson"
-          image="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939"
-        />
-        <Quote
-          quote="Me fail English? That's unpossible"
-          character="Ralph Wiggum"
-          image="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FRalphWiggum.png?1497567511523"
-        />
       </div>
     );
   }

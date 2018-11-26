@@ -1,5 +1,6 @@
 // Lamp.js
 import React, { Component } from 'react';
+import './lamp.css';
 
 class Lamp extends Component {
     constructor(props) {
@@ -17,10 +18,10 @@ class Lamp extends Component {
         const light = this.state.on ? 'on' : 'off';
         return (
         <div className="Lamp">
-            <button onClick={this.handleClick} className={light}>
+            <button onClick={this.handleClick} className={`${light} buttonLamp`}>
                 {light.toUpperCase()}
             </button>
-            <figure className={light} />
+            <figure className={`${light} figureLamp`} />
         </div>
         );
     }
